@@ -32,7 +32,6 @@ final class RealmStorageImpl: RealmStorage {
         let someModelArray: [SectionRealm] = someModelResults.toArray(ofType: SectionRealm.self)
         try! realm.commitWrite()
         
-        //dump(someModelArray)
         print("someModelArray Count: \(someModelArray.count)")
         
         completion(someModelArray)

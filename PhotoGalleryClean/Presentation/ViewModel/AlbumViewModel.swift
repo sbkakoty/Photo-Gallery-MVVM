@@ -28,6 +28,10 @@ class AlbumViewModel : NSObject {
         
         super.init()
         
+        /*let appDIC = AppDIContainer()
+        let photoGalleryDIC = appDIC.makePhotoGalleryDIContainer()
+        self.dataService = photoGalleryDIC.makeDataService()
+        self.photoAlbumRepository =  photoGalleryDIC.makePhotoAlbumRepository()*/
         self.getAlbumTitleUseCase =  albumTitleUseCase
         
         getAlbumTitle()

@@ -14,7 +14,6 @@ class NetworkService : NSObject {
         Alamofire.request(endpoint.url()).responseJSON(completionHandler: {
             response in
             
-            //dump(response)
             DispatchQueue.main.async {
                 
                 completion(response.data, response.response, response.result.error)

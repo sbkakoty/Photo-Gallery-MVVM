@@ -16,6 +16,8 @@ class AlbumViewController: UIViewController {
     
     let refreshControl = UIRefreshControl()
     
+    private var albumTitleUseCase: GetAlbumTitleUseCaseImpl!
+    private var albumPhotoUseCase: GetAlbumPhotoUseCaseImpl!
     private var albumViewModel : AlbumViewModel!
     private var albumPhotoViewModel: AlbumPhotoViewModel!
     private let bag = DisposeBag()
@@ -41,6 +43,7 @@ class AlbumViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.albumPhotoViewModel = AlbumPhotoViewModel()
         self.setUpLayout()
         self.collectionViewRefreshControl()
         self.loadCollectionViewData()
@@ -165,10 +168,9 @@ class AlbumViewController: UIViewController {
                             .disposed(by: bag)
             self.realmAlbumDataViewModel.getRealmAlbumData()
         } else {
-            self.albumPhotoViewModel =  AlbumPhotoViewModel()
-            let dataSource = albumPhotoViewModel.collectionViewDataSource()
             
-            self.albumPhotoViewModel.sectionObservable.bind(to: collectionView.rx.items(dataSource: dataSource))
+            let dataSource = albumPhotoViewModel.collectionViewDataSource()
+            self.albumPhotoViewModel.sectionObservable.bind(to: self.collectionView.rx.items(dataSource: dataSource))
                             .disposed(by: bag)
         }
     }
@@ -197,15 +199,12 @@ class AlbumViewController: UIViewController {
         
         var arraySectionRealm = [SectionRealm]()
         self.sections = [Section]()
-        self.albumPhotoViewModel = AlbumPhotoViewModel()
         self.albumPhotoViewModel.getAlbumPhotos(albums: self.albums)
         
         self.albumPhotoViewModel.bindAlbumPhotoViewModelToController = {
             
             self.albumPhotos = self.albumPhotoViewModel.albumPhotos
             self.sections = self.albumPhotoViewModel.sections
-            
-            dump(self.albumPhotos)
             
             if self.albums.count == SectionCount.shareInstance.sectionCount {
                 

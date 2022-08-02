@@ -31,10 +31,14 @@ class AlbumPhotoViewModel : NSObject {
     
     var bindAlbumPhotoViewModelToController : (() -> ()) = {}
     
-    init(albumPhotoUseCase: GetAlbumPhotoUseCase = GetAlbumPhotoUseCaseImpl(photoAlbumRepository: PhotoAlbumRepositoryImpl(dataService: DataServiceImpl(networkService: NetworkService())))) {
+    init(albumPhotoUseCase:  GetAlbumPhotoUseCase = GetAlbumPhotoUseCaseImpl(photoAlbumRepository: PhotoAlbumRepositoryImpl(dataService: DataServiceImpl(networkService: NetworkService())))) {
         
         super.init()
         
+        /*let appDIC = AppDIContainer()
+        let photoGalleryDIC = appDIC.makePhotoGalleryDIContainer()
+        self.dataService = photoGalleryDIC.makeDataService()
+        self.photoAlbumRepository =  photoGalleryDIC.makePhotoAlbumRepository()*/
         self.getAlbumPhotoUseCase =  albumPhotoUseCase
     }
     
@@ -71,13 +75,18 @@ class AlbumPhotoViewModel : NSObject {
         
         let dataSource = RxCollectionViewSectionedReloadDataSource<Section>(
             configureCell: { (_, collectionView, indexPath, items) in
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCollectionViewCell
                 
-                cell.setUpUIImageView()
-                //dump(items)
-                cell.albumPhoto = items
+                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell {
                 
-                return cell
+                    cell.setUpUIImageView()
+                    cell.albumPhoto = items
+                    
+                    return cell
+                } else {
+                    
+                    print("Error Creatining Cell")
+                    return UICollectionViewCell()
+                }
             }
         )
         
