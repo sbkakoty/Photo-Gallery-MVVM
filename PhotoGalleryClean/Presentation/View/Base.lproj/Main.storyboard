@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uQs-me-Gr8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Album View Controller-->
+        <scene sceneID="yLM-15-ovb">
+            <objects>
+                <viewController id="uQs-me-Gr8" customClass="AlbumViewController" customModule="PhotoGalleryClean" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SSJ-kI-Auk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nTn-6M-uUz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dmi-UV-h87">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="grg-y4-TeJ" customClass="PhotoCollectionViewCell" customModule="PhotoGalleryClean" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="feJ-sb-9Hf">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="albumHeader" id="QCt-eB-agR" customClass="PhotoCollectionReusableView" customModule="PhotoGalleryClean" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="z5Z-Yu-qeu">
+                                            <rect key="frame" x="5" y="0.0" width="404" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdO-n6-QQM">
+                                                    <rect key="frame" x="5" y="0.0" width="394" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="394" id="STs-Sg-86q"/>
+                                                        <constraint firstAttribute="height" constant="50" id="vMJ-NT-QyD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1173366331" green="0.46102971069999998" blue="0.47119899609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="jdO-n6-QQM" firstAttribute="centerX" secondItem="z5Z-Yu-qeu" secondAttribute="centerX" id="NXz-Ye-4X6"/>
+                                                <constraint firstItem="jdO-n6-QQM" firstAttribute="centerY" secondItem="z5Z-Yu-qeu" secondAttribute="centerY" id="WHx-7E-qgy"/>
+                                                <constraint firstItem="jdO-n6-QQM" firstAttribute="top" secondItem="z5Z-Yu-qeu" secondAttribute="top" id="ffh-Hv-AAu"/>
+                                                <constraint firstItem="jdO-n6-QQM" firstAttribute="leading" secondItem="z5Z-Yu-qeu" secondAttribute="leading" constant="5" id="iFO-yJ-E7p"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="containerView" destination="z5Z-Yu-qeu" id="3rR-BM-hmC"/>
+                                        <outlet property="labelAlbumTitle" destination="jdO-n6-QQM" id="5tQ-nq-qIq"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c6E-UF-NBE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nTn-6M-uUz" firstAttribute="top" secondItem="c6E-UF-NBE" secondAttribute="top" id="HfB-uK-Iaw"/>
+                            <constraint firstItem="nTn-6M-uUz" firstAttribute="centerX" secondItem="SSJ-kI-Auk" secondAttribute="centerX" id="Sb4-jn-wZ1"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nTn-6M-uUz" secondAttribute="bottom" constant="-9" id="auh-6w-tNN"/>
+                            <constraint firstItem="nTn-6M-uUz" firstAttribute="leading" secondItem="c6E-UF-NBE" secondAttribute="leading" id="ras-7e-jTa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="32N-pL-3l9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="nTn-6M-uUz" id="4qY-x0-8h8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bq-e8-VBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2539.130434782609" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zxx-fU-0oA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G54-m3-ax5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="thV-Xs-RxX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uQs-me-Gr8" kind="relationship" relationship="rootViewController" id="JHt-jF-kHn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3s-Y2-Prn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628.985507246377" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
