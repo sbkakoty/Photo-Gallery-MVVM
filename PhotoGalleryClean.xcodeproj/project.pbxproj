@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8108085E9659E99F266D49B /* Pods_PhotoGalleryClean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048A630202D1287B6BF586A8 /* Pods_PhotoGalleryClean.framework */; };
 		FA05BF3828715FC8003C4518 /* PhotoAlbumRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05BF3728715FC8003C4518 /* PhotoAlbumRepositoryImpl.swift */; };
 		FA05BF3B28715FF4003C4518 /* PhotoAlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05BF3A28715FF4003C4518 /* PhotoAlbumRepository.swift */; };
 		FA05BF3F2871860A003C4518 /* GetAlbumTitleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05BF3E2871860A003C4518 /* GetAlbumTitleUseCase.swift */; };
@@ -15,6 +14,7 @@
 		FA05BF4B2871A613003C4518 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05BF4A2871A612003C4518 /* AppConfig.swift */; };
 		FA05BF4F2871AC63003C4518 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05BF4E2871AC63003C4518 /* NetworkService.swift */; };
 		FA05BF522871AE7A003C4518 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05BF512871AE7A003C4518 /* DataService.swift */; };
+		FA0E3B7428A6722300B67C38 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E3B7328A6722300B67C38 /* Section.swift */; };
 		FA29667B28782C6C0089523E /* RealmStorageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29667A28782C6C0089523E /* RealmStorageRepositoryImpl.swift */; };
 		FA29667E28782C8F0089523E /* RealmStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29667D28782C8F0089523E /* RealmStorageRepository.swift */; };
 		FA42F0B9287ADF1E007AB289 /* customLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA42F0B8287ADF1E007AB289 /* customLaunchScreen.storyboard */; };
@@ -45,7 +45,6 @@
 		FAF812DD28709A16005A559A /* UserSessionRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF812D628709A16005A559A /* UserSessionRealm.swift */; };
 		FAF812DE28709A16005A559A /* SectionRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF812D728709A16005A559A /* SectionRealm.swift */; };
 		FAF812DF28709A16005A559A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF812D828709A16005A559A /* Album.swift */; };
-		FAF812E028709A16005A559A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF812D928709A16005A559A /* Section.swift */; };
 		FAF812E128709A16005A559A /* SectionCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF812DA28709A16005A559A /* SectionCount.swift */; };
 		FAF812E228709A16005A559A /* AlbumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF812DB28709A16005A559A /* AlbumPhoto.swift */; };
 		FAF812E828709B67005A559A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF812E728709B66005A559A /* Reachability.swift */; };
@@ -74,9 +73,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		048A630202D1287B6BF586A8 /* Pods_PhotoGalleryClean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoGalleryClean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		26F2864441300D754A99A2F4 /* Pods-PhotoGalleryClean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGalleryClean.release.xcconfig"; path = "Target Support Files/Pods-PhotoGalleryClean/Pods-PhotoGalleryClean.release.xcconfig"; sourceTree = "<group>"; };
-		EBC57B936F69895F2099477C /* Pods-PhotoGalleryClean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGalleryClean.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGalleryClean/Pods-PhotoGalleryClean.debug.xcconfig"; sourceTree = "<group>"; };
 		FA05BF3728715FC8003C4518 /* PhotoAlbumRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumRepositoryImpl.swift; sourceTree = "<group>"; };
 		FA05BF3A28715FF4003C4518 /* PhotoAlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumRepository.swift; sourceTree = "<group>"; };
 		FA05BF3E2871860A003C4518 /* GetAlbumTitleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlbumTitleUseCase.swift; sourceTree = "<group>"; };
@@ -84,6 +80,7 @@
 		FA05BF4A2871A612003C4518 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		FA05BF4E2871AC63003C4518 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FA05BF512871AE7A003C4518 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		FA0E3B7328A6722300B67C38 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		FA29667A28782C6C0089523E /* RealmStorageRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageRepositoryImpl.swift; sourceTree = "<group>"; };
 		FA29667D28782C8F0089523E /* RealmStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageRepository.swift; sourceTree = "<group>"; };
 		FA42F0B8287ADF1E007AB289 /* customLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = customLaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,7 +121,6 @@
 		FAF812D628709A16005A559A /* UserSessionRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionRealm.swift; sourceTree = "<group>"; };
 		FAF812D728709A16005A559A /* SectionRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionRealm.swift; sourceTree = "<group>"; };
 		FAF812D828709A16005A559A /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		FAF812D928709A16005A559A /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		FAF812DA28709A16005A559A /* SectionCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionCount.swift; sourceTree = "<group>"; };
 		FAF812DB28709A16005A559A /* AlbumPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhoto.swift; sourceTree = "<group>"; };
 		FAF812E728709B66005A559A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -154,26 +150,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8108085E9659E99F266D49B /* Pods_PhotoGalleryClean.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC3EC2FB9A7CDD12FDE77C48 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				048A630202D1287B6BF586A8 /* Pods_PhotoGalleryClean.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CFC5B33A294415BB4E4C33A6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EBC57B936F69895F2099477C /* Pods-PhotoGalleryClean.debug.xcconfig */,
-				26F2864441300D754A99A2F4 /* Pods-PhotoGalleryClean.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -245,7 +230,6 @@
 				FA7A8B0A28994A4400E525B5 /* PhotoGalleryCleanUnitTests */,
 				FAF8129928708E9D005A559A /* Products */,
 				CFC5B33A294415BB4E4C33A6 /* Pods */,
-				BC3EC2FB9A7CDD12FDE77C48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,8 +338,8 @@
 			children = (
 				FAF812D828709A16005A559A /* Album.swift */,
 				FAF812DB28709A16005A559A /* AlbumPhoto.swift */,
-				FAF812D928709A16005A559A /* Section.swift */,
 				FAF812DA28709A16005A559A /* SectionCount.swift */,
+				FA0E3B7328A6722300B67C38 /* Section.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -477,11 +461,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAF812AC28708EA1005A559A /* Build configuration list for PBXNativeTarget "PhotoGalleryClean" */;
 			buildPhases = (
-				089B830350CD6F6E0C296937 /* [CP] Check Pods Manifest.lock */,
 				FAF8129428708E9D005A559A /* Sources */,
 				FAF8129528708E9D005A559A /* Frameworks */,
 				FAF8129628708E9D005A559A /* Resources */,
-				AF966D44564332F0CA9D2341 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -563,48 +545,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		089B830350CD6F6E0C296937 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PhotoGalleryClean-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF966D44564332F0CA9D2341 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhotoGalleryClean/Pods-PhotoGalleryClean-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhotoGalleryClean/Pods-PhotoGalleryClean-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoGalleryClean/Pods-PhotoGalleryClean-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		FA7A8ADB289947C000E525B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -630,6 +570,7 @@
 				FAF812E828709B67005A559A /* Reachability.swift in Sources */,
 				FAEFF9DE28797DAA00FB75EE /* GetRealmUserSessionUseCase.swift in Sources */,
 				FA05BF4F2871AC63003C4518 /* NetworkService.swift in Sources */,
+				FA0E3B7428A6722300B67C38 /* Section.swift in Sources */,
 				FAF83EF92871E03A0085F08C /* APIEndpoints.swift in Sources */,
 				FAEFF9D82879797100FB75EE /* GetRealmAlbumDataUseCase.swift in Sources */,
 				FAF812E228709A16005A559A /* AlbumPhoto.swift in Sources */,
@@ -638,7 +579,6 @@
 				FA05BF3F2871860A003C4518 /* GetAlbumTitleUseCase.swift in Sources */,
 				FAAE8A072873097D005EDE9A /* RealmStorage.swift in Sources */,
 				FAF812F628709C5E005A559A /* PhotoCollectionViewCell.swift in Sources */,
-				FAF812E028709A16005A559A /* Section.swift in Sources */,
 				FA05BF4B2871A613003C4518 /* AppConfig.swift in Sources */,
 				FA9A2DCF288D7DFD005CB9C6 /* AlbumViewController.swift in Sources */,
 				FAF812EC28709B7F005A559A /* AlbumPhotoViewModel.swift in Sources */,
@@ -843,6 +783,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -897,13 +838,13 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		FAF812AD28708EA1005A559A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBC57B936F69895F2099477C /* Pods-PhotoGalleryClean.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -927,7 +868,6 @@
 		};
 		FAF812AE28708EA1005A559A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26F2864441300D754A99A2F4 /* Pods-PhotoGalleryClean.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
